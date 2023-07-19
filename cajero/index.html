@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cajero Automático</title>
+  
+</head>
+<body>
+  <h1>Cajero Automático</h1>
+
+  <label for="cuentas">Selecciona una cuenta:</label>
+  <select id="cuentas">
+    <option value="0">Persona 1</option>
+    <option value="1">Persona 2</option>
+    <option value="2">Persona 3</option>
+  </select>
+  <br>
+
+  <label for="password">Ingresa el password:</label>
+  <input type="password" id="password">
+  <button onclick="login()">Ingresar</button>
+  <br>
+
+  <div id="operaciones" style="display: none;">
+    <h2>Operaciones</h2>
+
+    <button onclick="consultarSaldo()">Consultar saldo</button>
+    <br>
+
+    <label for="montoIngresar">Ingresa el monto a ingresar:</label>
+    <input type="number" id="montoIngresar" min="10" max="990">
+    <button onclick="ingresarMonto()">Ingresar monto</button>
+    <br>
+
+    <label for="montoRetirar">Ingresa el monto a retirar:</label>
+    <input type="number" id="montoRetirar" min="10" max="990">
+    <button onclick="retirarMonto()">Retirar monto</button>
+    <br>
+
+    <h3>Saldo actual: <span id="saldo"></span></h3>
+    <h3 id="mensaje"></h3>
+  </div>
+<script src="js/script.js"></script>
+
+</body>
+</html>
